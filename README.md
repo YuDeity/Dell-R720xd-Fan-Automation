@@ -1,10 +1,10 @@
 # Dell R720xd iDRAC 风扇自动控制 Web 面板
 
 ##注意！ index.html演示模板请放在templates/
-文件夹(可以自己起名)/
-├── app.py 
+根目录/
+├── app.py
 ├── templates/
-└──     └── index.html
+│   └── index.html
 基于 Flask + ipmitool 的简单 Web 界面，用于远程/本地控制 Dell PowerEdge R720xd 的风扇转速，支持自动根据 CPU 温度调节。
 
 ## 特性
