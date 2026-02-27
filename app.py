@@ -7,7 +7,7 @@ import sys
 
 app = Flask(__name__)
 
-# 从环境变量读取配置（更安全，推荐方式）
+# 从环境变量读取配置（更安全）
 IDRAC_IP   = os.getenv("IDRAC_IP",   "192.168.0.100")   # 请自行修改默认值或保持为空
 IDRAC_USER = os.getenv("IDRAC_USER", "root")
 IDRAC_PASS = os.getenv("IDRAC_PASS")
@@ -35,7 +35,7 @@ TEMP_HIGH = 80
 
 # 全局变量
 auto_mode = True
-current_fan_hex = "0x14"          # 初始值，仅用于显示
+current_fan_hex = "0x14"          # 初始值
 current_temp = "N/A"
 status_log = []
 
@@ -180,4 +180,5 @@ if __name__ == "__main__":
     print(f"启动 Dell R720xd 风扇控制 Web 面板...")
     print(f"iDRAC: {IDRAC_IP}   用户: {IDRAC_USER}")
     print("访问地址: http://0.0.0.0:5000 （或你的服务器IP:5000）")
+
     app.run(host="0.0.0.0", port=5000, debug=False)
