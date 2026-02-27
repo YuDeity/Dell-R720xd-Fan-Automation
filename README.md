@@ -28,16 +28,13 @@ sudo apt update
 sudo apt install python3 python3-pip ipmitool -y
 pip3 install flask
 
-# 2. 克隆仓库
-git clone https://github.com/你的用户名/r720xd-fan-control-web.git
-cd r720xd-fan-control-web
 
-# 3. 设置环境变量（必须！）
+# 2. 设置环境变量（必须！）
 export IDRAC_IP="192.168.1.88"          # 替换成你的 iDRAC IP
 export IDRAC_USER="root"                # 默认 root，也可修改
 export IDRAC_PASS="你的iDRAC密码"       # 强烈建议用强密码
 
-# 4. 启动（前台测试）
+# 5. 启动（前台测试）
 python3 app.py
 
 ## 温度阈值（℃）
